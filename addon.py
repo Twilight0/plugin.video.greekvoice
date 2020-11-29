@@ -103,9 +103,9 @@ rc = [
 
 channel_id = 'UC0HzJJlSxjhhN4OAXHHQIOg'
 SCRAMBLE = (
-            'eJwVy8EOgiAAANBfcZzTZWBBt5xtpmsecqVdGiqQqUGAbdb69+b9vS8wrNbMgq0DYhQmj/U+jY6V4Jv8hS7S3so4AgsHUNXeOjbNbHf40N'
-            'MUElLkkGdhl+gUx++xKGl1dbN92kp5hmg3r7aZA/LhkmA/wBhv3H5AXPUEUzU0DYfWLO8rG3QPoWW1Npp4VCnjCSlFz0bDdC2flj2tV8sB'
-            '/P5BuTe0'
+            'eJwVy80KgjAAAOBXkZ1TdCrTbmIhogVhYHUR24Yzl1ubP1n07uH9+75AU6zoALYGaNLkUJ6YyXEWeTebDZdsHqGHwcYAtWyrji4ri9JPXS'
+            'yxSooS7eTcPsg9z0O2XI/v86vak1HESPBgXS1ZA7Rtzw2RGyAfmRPjyPFdSBWRsCGOpoSzafJF1wVKt8SqpdRWI0TD6aipwqIfaD9YWDzB'
+            '7w/HIjj4'
         )
 
 # Build Root Menu:
@@ -245,7 +245,7 @@ elif action == 'guide':
 
 elif action == 'settings':
 
-    control.Settings()
+    control.openSettings()
 
 if __name__ == '__main__':
 
