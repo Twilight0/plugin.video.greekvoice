@@ -27,9 +27,9 @@ url = params.get('url')
 lc = [
     {
         'title': 'Greek Voice',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV1_icon.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV1_icon.png'),
         'url': 'http://wpso.com:1936/hls/wzra.m3u8',
-        'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV_TV1_fanart.jpg'),
+        'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV_TV1_fanart.jpg'),
         'plot': u'Greek Voice 1'
     }
     ,
@@ -43,23 +43,23 @@ lc = [
     # ,
     {
         'title': 'TILEMOUSIKI 1 SD',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='TILEMOUSIKI1SD.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='TILEMOUSIKI1SD.png'),
         'url': 'mmsh://wpso.com:200/music',
-        'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='TILEMOUSIKI_fanart.jpg'),
+        'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='TILEMOUSIKI_fanart.jpg'),
         'plot': u'Εκπέμπει Παλαιά Τραγούδια και κονσέρτα σε ποιότητα SD'
     }
     ,
     {
         'title': 'TILEMOUSIKI 2 HD',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='TILEMOUSIKI2HD.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='TILEMOUSIKI2HD.png'),
         'url': 'http://wpso.com:1936/hls/music.m3u8',
-        'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='TILEMOUSIKI_fanart.jpg'),
+        'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='TILEMOUSIKI_fanart.jpg'),
         'plot': u'Μουσικό κανάλι εκπέμπει 24/7 σε σύστημα HD'
     }
     ,
     {
         'title': 'WZRA KIDS 1',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='WZRA_KIDS_icon.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='WZRA_KIDS_icon.png'),
         'url': 'mmsh://wpso.com:200/kids',
         'fanart': control.addonInfo('fanart'),
         'plot': u'Παιδικό Κανάλι 24/7'
@@ -67,7 +67,7 @@ lc = [
     ,
     {
         'title': 'WZRA KIDS 2',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='WZRA_KIDS_icon.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='WZRA_KIDS_icon.png'),
         'url': 'http://wpso.com:1936/hls/kidshd.m3u8',
         'fanart': control.addonInfo('fanart'),
         'plot': u'Παιδικό Κανάλι 24/7'
@@ -78,25 +78,25 @@ lc = [
 rc = [
     {
         'title': 'WPSO Greek Voice Radio',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='wpso_icon.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='wpso_icon.png'),
         'url': 'http://wpso.com:8000/',
-        'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV_Radio_fanart.jpg'),
+        'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV_Radio_fanart.jpg'),
         'plot': u'Ραδιοφωνικός σταθμός Φωνή Των Ελλήνων, παγκοσμία κάλυψη'
     }
     ,
     {
         'title': 'WXYB Radio GR IT ES',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='wxyb_icon.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='wxyb_icon.png'),
         'url': 'http://wpso.com:7071/',
-        'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV_Radio_fanart.jpg'),
+        'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV_Radio_fanart.jpg'),
         'plot': 'Radio WXYB 1520Khz Greek Italian & Spanish'
     }
     ,
     {
         'title': 'XAMOS Youth Radio',
-        'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='xamos_icon.png'),
+        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='xamos_icon.png'),
         'url': 'http://xamosam.com:9050',
-        'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='xamos_fanart.jpg'),
+        'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='xamos_fanart.jpg'),
         'plot': 'XAMOS Youth Radio 1500 KHz AM'
     }
 ]
@@ -116,37 +116,37 @@ def main_menu():
     menu_items = [
             {
                 'title': control.lang(30001),
-                'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='television.png'),
+                'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='television.png'),
                 'url': '{0}?action={1}'.format(sysaddon, 'live'),
-                'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV_TV2_fanart.jpg')
+                'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV_TV2_fanart.jpg')
             }
             ,
             {
                 'title': control.lang(30002),
-                'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='radio.png'),
+                'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='radio.png'),
                 'url': '{0}?action={1}'.format(sysaddon, 'radio'),
-                'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='TILEMOUSIKI_fanart.jpg')
+                'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='TILEMOUSIKI_fanart.jpg')
             }
             ,
             {
                 'title': control.lang(30014),
-                'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV_YT_icon.png'),
+                'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV_YT_icon.png'),
                 'url': 'plugin://plugin.video.youtube/channel/{0}/?addon_id={1}'.format(channel_id, control.addonInfo('id')),
-                'fanart': control.addonmedia(addonid='script.greekvoice.artwork', icon='GV_TV2_fanart.jpg')
+                'fanart': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='GV_TV2_fanart.jpg')
             }
             # ,
             # {
             #     'title': control.lang(30004),
-            #     'icon': control.addonmedia(addonid='script.greekvoice.artwork', icon='settings.png'),
+            #     'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='settings.png'),
             #     'url': '{0}?action={1}'.format(sysaddon, 'settings'),
             #     'fanart': control.addonInfo('fanart')
             # }
     ]
 
     for item in menu_items:
-        li = control.item(label=item['title'], iconImage=item['icon'], thumbnailImage=item['icon'])
+        li = control.item(label=item['title'])
         li.setInfo('video', {'title': item['title']})
-        li.setArt({'fanart': item['fanart']})
+        li.setArt({'fanart': item['fanart'], 'icon': item['icon'],'thumb': item['icon']})
         _url = item['url']
         if item['url'].endswith('settings'):
             _isFolder = False
@@ -166,7 +166,7 @@ def constructor(channels):
 
         li = control.item(label=item['title'], iconImage=item['icon'], thumbnailImage=item['icon'])
         li.setInfo('video', {'title': item['title'], 'plot': item['plot']})
-        li.setArt({'fanart': item['fanart']})
+        li.setArt({'fanart': item['fanart'], 'icon': item['icon'],'thumb': item['icon']})
         li.setProperty('IsPlayable', 'true')
         _url = '{0}?action=play&url={1}'.format(sysaddon, item['url'])
         _isFolder = False
