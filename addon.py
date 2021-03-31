@@ -164,7 +164,7 @@ def constructor(channels):
 
     for item in channels:
 
-        li = control.item(label=item['title'], iconImage=item['icon'], thumbnailImage=item['icon'])
+        li = control.item(label=item['title'])
         li.setInfo('video', {'title': item['title'], 'plot': item['plot']})
         li.setArt({'fanart': item['fanart'], 'icon': item['icon'],'thumb': item['icon']})
         li.setProperty('IsPlayable', 'true')
