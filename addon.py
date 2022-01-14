@@ -15,7 +15,6 @@ from tulip.compat import parse_qsl
 from youtube_registration import register_api_keys
 from zlib import decompress
 from base64 import b64decode
-from os import path
 
 sysaddon = argv[0]
 syshandle = int(argv[1])
@@ -58,15 +57,7 @@ lc = [
     }
     ,
     {
-        'title': 'WZRA KIDS 1',
-        'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='WZRA_KIDS_icon.png'),
-        'url': 'mmsh://wpso.com:200/kids',
-        'fanart': control.addonInfo('fanart'),
-        'plot': u'Παιδικό Κανάλι 24/7'
-    }
-    ,
-    {
-        'title': 'WZRA KIDS 2',
+        'title': 'WZRA KIDS',
         'icon': control.addonmedia(addonid='resource.images.greekvoice.artwork', icon='WZRA_KIDS_icon.png'),
         'url': 'http://wpso.com:1936/hls/kidshd.m3u8',
         'fanart': control.addonInfo('fanart'),
@@ -101,12 +92,13 @@ rc = [
     }
 ]
 
-channel_id = 'UC0HzJJlSxjhhN4OAXHHQIOg'
+channel_id = 'UCS7szYSyAHK3lRcJ_AInUSA'
 SCRAMBLE = (
-            'eJwVy80KgjAAAOBXkZ1TdCrTbmIhogVhYHUR24Yzl1ubP1n07uH9+75AU6zoALYGaNLkUJ6YyXEWeTebDZdsHqGHwcYAtWyrji4ri9JPXS'
-            'yxSooS7eTcPsg9z0O2XI/v86vak1HESPBgXS1ZA7Rtzw2RGyAfmRPjyPFdSBWRsCGOpoSzafJF1wVKt8SqpdRWI0TD6aipwqIfaD9YWDzB'
-            '7w/HIjj4'
+            'eJwVzMEOgiAYAOBXaZzTBZZWN+1QzS3brGknh0JaGqD8LKz17s0H+L4vejC0naF14C99L1gGGBOH4rbfAIiV2oBnyqf/KkWjGRWkb2Xga5'
+            'cqpd1ayrrjRvOhkgK4ALeSLzSfIaoeRcvHqQ2PH5qO0a0Zw+wQR7XF5spUCOdYZD1rib3k46lbTErzauAwoX2yS8+506XJ+z5keZHFF48s'
+            'VpBY65QM6shY9PsD2wk9GA=='
         )
+
 
 # Build Root Menu:
 def main_menu():
@@ -200,27 +192,13 @@ def guide():
 
 def keys_registration():
 
-    filepath = control.transPath(
-        control.join(control.addon('plugin.video.youtube').getAddonInfo('profile'), 'api_keys.json')
-    )
-
     setting = control.addon('plugin.video.youtube').getSetting('youtube.allow.dev.keys') == 'true'
 
-    if path.exists(filepath):
+    if setting:
 
-        f = open(filepath)
+        keys = json.loads(decompress(b64decode(SCRAMBLE)))
 
-        jsonstore = json.load(f)
-
-        no_keys = control.addonInfo('id') not in jsonstore.get('keys', 'developer').get('developer')
-
-        if setting and no_keys:
-
-            keys = json.loads(decompress(b64decode(SCRAMBLE)))
-
-            register_api_keys(control.addonInfo('id'), keys['api_key'], keys['id'], keys['secret'])
-
-        f.close()
+        register_api_keys(control.addonInfo('id'), keys['api_key'], keys['id'], keys['secret'])
 
 
 if action is None:
